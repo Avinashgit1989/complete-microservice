@@ -30,16 +30,18 @@ This repo contains employee and department service which will worked based on mi
     
 <details>
   <summary>Click here to see all endpoints to Test API without gateway </summary>
-  1. http://localhost:8081/employee/add
-  2. http://localhost:8081/employee/getAll
-  3. http://localhost:8081/employee/getEmployeeById/1
-  4. http://localhost:8081/employee/update/1
-  5. http://localhost:8081/employee/delete/1
+  
+    1. http://localhost:8081/employee/add
+    2. http://localhost:8081/employee/getAll
+    3. http://localhost:8081/employee/getEmployeeById/1
+    4. http://localhost:8081/employee/update/1
+    5. http://localhost:8081/employee/delete/1
    
 </details>
 
 <details>
   <summary>Click here to see all endpoints to Test API with gateway </summary>
+  
   1. http://localhost:8080/employee/add
   2. http://localhost:8080/employee/getAll
   3. http://localhost:8080/employee/getEmployeeById/1
@@ -86,6 +88,7 @@ This repo contains employee and department service which will worked based on mi
         http://localhost:8080/api/v1/department/v3/api-docs  
 <details>
   <summary>Click here to see all endpoints to Test API without gateway </summary>
+  
   1. http://localhost:8082/api/v1/department/add
   2. http://localhost:8082/api/v1/department/getAll
   3. http://localhost:8082/api/v1/department/getDepartmentById/1
@@ -96,6 +99,7 @@ This repo contains employee and department service which will worked based on mi
 
 <details>
   <summary>Click here to see all endpoints to Test API with gateway </summary>
+  
   1. http://localhost:8080/api/v1/department/add
   2. http://localhost:8080/api/v1/department/getAll
   3. http://localhost:8080/api/v1/department/getDepartmentById/1
