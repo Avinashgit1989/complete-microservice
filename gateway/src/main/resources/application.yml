@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/employee/**, /employee/swagger-ui.html, /employee/v3/api-docs, /employee/webjars/**
+          #filters:
+           # - StripPrefix=1
+        - id: department
+          uri: lb://department
+          predicates:
+            - Path=/api/v1/department/**, /api/v1/department/swagger-ui.html, /api/v1/department/v3/api-docs, api/v1/department/webjars/**
+            #filters:
+            # - StripPrefix=1
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: localhost
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
