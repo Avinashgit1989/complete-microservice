@@ -12,6 +12,22 @@ This repo contains employee and department service which will worked based on mi
  This service will allow single entry point to access the application example (Employee, department). It will also authenticate and authorized the user before invoking the employee and department service. 
   ## 3. Employee Service
   This service will perforn CRUD Operation with valid request and return the valid json response.
+
+  ## Swagger Link
+      With Service 
+        http://localhost:8081/employee/swagger-ui/index.html
+
+        Using api Gateway
+        http://localhost:8080/employee/swagger-ui/index.html
+
+        
+   ## Swagger Api-docs Link
+      With Service 
+        http://localhost:8081/employee/v3/api-docs
+
+        Using api Gateway
+        http://localhost:8080/employee/v3/api-docs 
+    
 <details>
   <summary>Click here to see all endpoints to Test API without gateway </summary>
   1. http://localhost:8081/employee/add
@@ -53,6 +69,21 @@ This repo contains employee and department service which will worked based on mi
 
 ## 4. Department Service
   This service will perforn CRUD Operation with valid request and return the valid json response.
+
+ ## Swagger Link
+      With Service 
+        http://localhost:8082/api/v1/department/swagger-ui/index.html
+
+        Using api Gateway
+        http://localhost:8080/api/v1/department/swagger-ui/index.html
+
+        
+   ## Swagger Api-docs Link
+      With Service 
+        http://localhost:8082/api/v1/department/v3/api-docs
+
+        Using api Gateway
+        http://localhost:8080/api/v1/department/v3/api-docs  
 <details>
   <summary>Click here to see all endpoints to Test API without gateway </summary>
   1. http://localhost:8082/api/v1/department/add
