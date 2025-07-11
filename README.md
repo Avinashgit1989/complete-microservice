@@ -4,13 +4,21 @@ This repo contains employee and department service which will worked based on mi
   ##### 2. Gateway Service
   ##### 3. Employee Service
   ##### 4. Department Service
+  ##### 5. Identity Service 
  ## 1. Registry Service
  
  This Service will register all service to the common place. and we can call the downstream service with name using feign client.
- ## 2. Gateway Service
+ 
+      http://localhost:8761/
 
- This service will allow single entry point to access the application example (Employee, department). It will also authenticate and authorized the user before invoking the employee and department service. 
-  ## 3. Employee Service
+  ## 2. Gateway Service
+
+ This service will allow single entry point to access the application example (Employee, department). It will also authenticate and authorized the user before invoking the employee and department service.
+
+    http://localhost:8080/
+
+
+   ## 3. Employee Service
   This service will perforn CRUD Operation with valid request and return the valid json response.
 
   ## Swagger Link
@@ -116,4 +124,58 @@ This repo contains employee and department service which will worked based on mi
      "deptCode":"AD",
      "deptlocation":"Ground Flower"  
   }
+  ````
+
+## 5. Identity Service
+This service will perform operation to Sign in user, generate Jwt Token and Validate Token with valid request and return the valid json response.
+
+## Swagger Link
+      With Service 
+        http://localhost:8083/auth/swagger-ui/index.html
+
+        Using api Gateway
+        http://localhost:8080/auth/swagger-ui/index.html
+
+
+## Swagger Api-docs Link
+      With Service 
+        http://localhost:8083/auth/v3/api-docs
+
+        Using api Gateway
+        http://localhost:8080/auth/v3/api-docs  
+<details>
+  <summary>Click here to see all endpoints to Test API without gateway </summary>
+
+1. http://localhost:8083/auth/signup
+2. http://localhost:8083/auth/login
+3. http://localhost:8083/auth/validateToken?token=fdsgadgdf
+
+</details>
+
+<details>
+  <summary>Click here to see all endpoints to Test API with gateway </summary>
+
+1. http://localhost:8080/auth/signup
+2. http://localhost:8080/auth/login
+3. http://localhost:8080/auth/validateToken?token=fdsgadgdf
+
+</details>
+
+## Payload to Signup
+
+````
+  {
+      "username": "Avinash",
+      "password": "avi@123",
+      "role": "User"
+   }
+  ````
+
+## Payload to Login
+
+````
+  {
+      "username": "Avinash",
+      "password": "avi@123"
+   }
   ````
