@@ -10,9 +10,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @OpenAPIDefinition(
 		info = @Info(
-				title = "Employee Service API",
+				title = "Department Service API",
 				version = "1.0",
-				description = "API documentation for Employee Service"
+				description = "API documentation for Department Service"
 		)
 )
 @SpringBootApplication
