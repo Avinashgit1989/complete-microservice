@@ -21,4 +21,5 @@ public class DepartmentEntity {
     private String deptLocation;
 
     // Additional fields and methods can be added as needed
+
 }

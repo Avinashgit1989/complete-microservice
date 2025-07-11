@@ -1,8 +1,6 @@
 package com.avijava.department.model.request;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 @Builder
 @Data

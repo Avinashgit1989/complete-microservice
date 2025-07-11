@@ -12,14 +12,24 @@ spring:
           uri: lb://employee-service
           predicates:
             - Path=/employee/**, /employee/swagger-ui.html, /employee/v3/api-docs, /employee/webjars/**
+          filters:
+            - AuthenticationFilter
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
           #filters:
            # - StripPrefix=1
         - id: department
           uri: lb://department
           predicates:
-            - Path=/api/v1/department/**, /api/v1/department/swagger-ui.html, /api/v1/department/v3/api-docs, api/v1/department/webjars/**
-            #filters:
-            # - StripPrefix=1
+            - Path=/api/v1/department/**, /api/v1/department/swagger-ui.html, /api/v1/department/v3/api-docs, /api/v1/department/webjars/**
+          filters:
+            - AuthenticationFilter
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - id: identity-service
+          uri: lb://identity-service
+          predicates:
+            - Path=/auth/**, /auth/swagger-ui.html, /auth/v3/api-docs, /auth/webjars/**
+
 
 eureka:
   instance:
@@ -31,3 +41,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+jwt:
+  secret: 2164cfbf862fe43c204285ef9e89e9a4577a7ace0098b3472d070b930ff5798c #avinashkumartiwarisecuritykeyfortoken
